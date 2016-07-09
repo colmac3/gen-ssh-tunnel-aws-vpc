@@ -1,0 +1,5 @@
+Host <%= instance_id %> 
+      HostName <%= private_ip_address %>
+      IdentityFile ~/.ssh/<%= pem_for_instance %>
+      User <%= login_user_name %>
+      ProxyCommand ssh -q -F ~/.ssh/config -W %h:%p <%= instance_id_jump %>

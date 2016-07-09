@@ -1,0 +1,10 @@
+Host <%= instance_id_jump %>
+      HostName <%= instance_id_ipaddress %>
+      IdentityFile ~/.ssh/<%= jump_box_pem %>
+      User <%= ubuntu_login_user_name %>
+
+Host <%= instance_id_for_private_ip %> 
+      HostName <%= private_ip_address %>
+      IdentityFile ~/.ssh/<%= ssh_key_for_instance %>
+      User <%= ubuntu_login_user_name %>
+      ProxyCommand ssh -q -F ~/.ssh/config -W %h:%p <%= instance_id_jump %>
