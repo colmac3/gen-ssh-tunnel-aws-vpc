@@ -1,6 +1,6 @@
 # gen-ssh-tunnel-aws-vpc
 Generates an ssh config file of instance id's and a tunnel using a jumpbox into the VPC. ssh i-123456 is all that is needed
-to ssh to an instance. you will need the key pairs you generated via aws key pairs. place all the .pem files in your .ssh directroy.
+to ssh to an instance. you will need the key pairs you generated via aws key pairs. place all the .pem files in your .ssh directory.
 
 First, you ruby purest out there, dont send me any email.  
 
